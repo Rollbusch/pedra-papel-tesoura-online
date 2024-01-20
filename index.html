@@ -22,7 +22,7 @@
       <input id="input" autocomplete="off" /><button>Send</button>
     </form>
   </body>
-  <script src="/socket.io/socket.io.js"></script>
+  <script src="http://localhost:3000/socket.io/socket.io.js"></script>
   <script>
     const socket = io();
 
@@ -39,7 +39,6 @@
     });
 
     socket.on('chat message', (msg) => {
-      console.log(111, msg)
       const item = document.createElement('li');
       item.textContent = msg;
       messages.appendChild(item);
